@@ -22,3 +22,8 @@ copy the realm files in the container (or make a volumen out of it)
 
 run the import script
 `/opt/keycloak/bin/kc.sh import --file /tmp/dc-realm.json --override true`
+
+## docker run example
+`docker run -di --name kc -p 8787:8787 -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e DEBUG_PORT="*:8787" -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:18.0.1 --debug start-dev`
+
+# for VHosts implementation check the vhost branch
